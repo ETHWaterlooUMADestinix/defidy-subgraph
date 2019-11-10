@@ -15,11 +15,6 @@ dataSources:
       entities:
         - GetBorrowers
         - GetSuppliers
-        - OwnershipRenounced
-        - OwnershipTransferred
-        - ChainlinkRequested
-        - ChainlinkFulfilled
-        - ChainlinkCancelled
       abis:
         - name: Contract
           file: ./abis/Contract.json
@@ -28,14 +23,6 @@ dataSources:
           handler: handleGetBorrowers
         - event: GetSuppliers(bytes32,uint256)
           handler: handleGetSuppliers
-        - event: OwnershipRenounced(address)
-          handler: handleOwnershipRenounced
-        - event: OwnershipTransferred(address,address)
-          handler: handleOwnershipTransferred
-        - event: ChainlinkRequested(bytes32)
-          handler: handleChainlinkRequested
-        - event: ChainlinkFulfilled(bytes32)
-          handler: handleChainlinkFulfilled
-        - event: ChainlinkCancelled(bytes32)
-          handler: handleChainlinkCancelled
       file: ./src/mapping.ts
+
+      
