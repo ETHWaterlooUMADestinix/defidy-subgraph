@@ -1,0 +1,37 @@
+type GetBorrowers @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  price: BigInt! # uint256
+}
+
+type GetSuppliers @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  price: BigInt! # uint256
+}
+
+type OwnershipRenounced @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+}
+
+type OwnershipTransferred @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type ChainlinkRequested @entity {
+  id: ID!
+  id: Bytes! # bytes32
+}
+
+type ChainlinkFulfilled @entity {
+  id: ID!
+  id: Bytes! # bytes32
+}
+
+type ChainlinkCancelled @entity {
+  id: ID!
+  id: Bytes! # bytes32
+}
